@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Header = () => {
+    // массив ссылок и их описания
     const navHref = [
         {
             navText: 'Вернуться на GitHub',
@@ -14,10 +15,14 @@ const Header = () => {
 
     return (
         <>
+        {/* Header  в котором хранится информация о доступных сслыках */}
             <header>
                 <nav>
                     <ul>
                         {
+                            // Чтобы не прописывать каждый элемент по отдельности, используется метод map,
+                            //  который будет возвращать ссылку для каждого отдельного объекта
+                            //  из массива navHref
                             navHref.map(navEl => {
                                 return (
                                     <a href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>

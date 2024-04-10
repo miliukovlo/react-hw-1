@@ -31,4 +31,52 @@ header nav ul a:visited {
   color: white;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-block {
+  width: 90%;
+  height: 20%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-block .about-block__image {
+  width: 20vh;
+  height: 20vh;
+  min-height: 170px;
+  min-width: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: flex-start;
+}
+.about-block .about-block__image:hover {
+  animation: image-of-person-rotate 2s linear infinite;
+}
+.about-block .about-block__information {
+  width: 40%;
+  height: 100%;
+  word-wrap: break-word;
+}
+.about-block .about-block__information p {
+  font-size: 4vh;
+}
+
+@keyframes image-of-person-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 /*# sourceMappingURL=App.css.map */
