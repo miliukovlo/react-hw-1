@@ -5,7 +5,7 @@ const Header = () => {
     const navHref = [
         {
             navText: 'Вернуться на GitHub',
-            href: 'https://github.com/ssadown'
+            href: 'https://github.com/ssadown/react-hw-1'
         },
         {
             navText: 'Написать в Telegram',
