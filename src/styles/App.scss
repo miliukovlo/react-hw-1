@@ -1,11 +1,13 @@
 $main-color: #222222;
+$secondary-color: #d6d6d6;
 $competence-can: #006400;
 $competence-cant: #8b0000;
 
 header {
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: rgba($color: $main-color, $alpha: 1.0);
+    min-height: 70px;
     nav {
         display: flex;
         width: 90%;
@@ -20,16 +22,16 @@ header {
             justify-content: space-around;
             a {
                 text-decoration: none;
-                color: white;
+                color: $secondary-color;
                 transition-duration: 0.4s;
                 border-bottom: 1px solid transparent;
                 padding: 5px 10px;
             }
             a:hover {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid $secondary-color;
             }
             a:visited {
-                color: white
+                color: $secondary-color
             }
         }
     }
@@ -39,6 +41,15 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $secondary-color;
+    h1 { 
+        width: 70%;
+        padding: 20px;
+        border-bottom: 3px solid $main-color;
+        text-align: center;
+        border-radius: 3px;
+        color: $main-color;
+    }
 }
 .about-block {
     width: 90%;
@@ -58,9 +69,12 @@ main {
         justify-content: center;
         cursor: pointer;
         align-items: flex-start;
+        border: 1px solid transparent;
+        transition-duration: 0.95s;
     }
     .about-block__image:hover {
         animation: image-of-person-rotate 2s linear infinite;
+        border: 1px solid $main-color;
     }
     .about-block__information {
         width: 40%;
@@ -68,6 +82,7 @@ main {
         word-wrap: break-word;
         p {
             font-size: 4vh;
+            color: $main-color;
         }
     }
 }
@@ -77,6 +92,7 @@ main {
     height: 15%;
     min-height: 200px;
     display: flex;
+    margin-bottom: 20px;
     align-items: center;
     justify-content: space-around;
     border-radius: 8px;
@@ -85,13 +101,16 @@ main {
         width: 25%;
         text-align: center;
         height: 100%;
+        color: $main-color;
     }
     p {
         font-size: 2vh;
         word-wrap: break-word;
+        color: $main-color;
     }
     span {
         font-size: 2vh;
+        color: $main-color;
     }
     .competence-info {
         width: 50%;
@@ -100,6 +119,7 @@ main {
     .competence-level {
         width: 25%;
         height: 100%;
+        text-align: center;
     }
 }
 .can {
@@ -107,6 +127,21 @@ main {
 }
 .cant {
     border: 2px solid $competence-cant;
+}
+footer {
+    width: 100%;
+    height: 10%;
+    background-color: rgba($color: $main-color, $alpha: 1.0);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        width: 100%;
+        text-align: center;
+        color: $secondary-color;
+        margin: 0;
+    }
 }
 
 @keyframes image-of-person-rotate {

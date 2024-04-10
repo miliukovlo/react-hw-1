@@ -8,6 +8,7 @@ const Competence = ({
 }) => {
     return (
         <>
+        {/* Цвет границ блока зависит от значения isICan */}
             <div className={isICan ? 'competence-block can' : 'competence-block cant'}>
                 <h2>{nameOfCompetence}</h2>
                 <p className='competence-info'>{informationAboutCompetence}</p>

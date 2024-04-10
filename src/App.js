@@ -1,3 +1,4 @@
+import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Main from './Components/Main';
 import './styles/App.css';
@@ -10,6 +11,7 @@ const App = () => {
       <Header/>
       {/* Компонент Main создан для помещения туда основного контента */}
       <Main/>
+      <Footer/>
     </>
   );
 }
