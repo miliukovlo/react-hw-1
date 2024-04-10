@@ -70,6 +70,45 @@ main {
   font-size: 4vh;
 }
 
+.competence-block {
+  width: 90%;
+  height: 15%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+.competence-block h2 {
+  font-size: 3vh;
+  width: 25%;
+  text-align: center;
+  height: 100%;
+}
+.competence-block p {
+  font-size: 2vh;
+  word-wrap: break-word;
+}
+.competence-block span {
+  font-size: 2vh;
+}
+.competence-block .competence-info {
+  width: 50%;
+  height: 100%;
+}
+.competence-block .competence-level {
+  width: 25%;
+  height: 100%;
+}
+
+.can {
+  border: 2px solid #006400;
+}
+
+.cant {
+  border: 2px solid #8b0000;
+}
+
 @keyframes image-of-person-rotate {
   0% {
     transform: rotateZ(0deg);

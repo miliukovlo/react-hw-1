@@ -1,4 +1,6 @@
 $main-color: #222222;
+$competence-can: #006400;
+$competence-cant: #8b0000;
 
 header {
     width: 100%;
@@ -68,6 +70,43 @@ main {
             font-size: 4vh;
         }
     }
+}
+
+.competence-block {
+    width: 90%;
+    height: 15%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    h2 {
+        font-size: 3vh;
+        width: 25%;
+        text-align: center;
+        height: 100%;
+    }
+    p {
+        font-size: 2vh;
+        word-wrap: break-word;
+    }
+    span {
+        font-size: 2vh;
+    }
+    .competence-info {
+        width: 50%;
+        height: 100%;
+    }
+    .competence-level {
+        width: 25%;
+        height: 100%;
+    }
+}
+.can {
+    border: 2px solid $competence-can;
+}
+.cant {
+    border: 2px solid $competence-cant;
 }
 
 @keyframes image-of-person-rotate {
