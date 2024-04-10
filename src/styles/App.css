@@ -95,9 +95,10 @@ main h1 {
   border-radius: 8px;
 }
 .competence-block h2 {
-  font-size: 3vh;
+  font-size: 2.2vh;
   width: 25%;
   text-align: center;
+  word-wrap: break-word;
   height: 100%;
   color: #222222;
 }
@@ -144,6 +145,34 @@ footer h1 {
   margin: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .competence-block {
+    flex-direction: column;
+    width: 70%;
+  }
+  .competence-block h2 {
+    width: 90%;
+    height: 25%;
+  }
+  .competence-block .competence-info {
+    width: 90%;
+    text-align: center;
+    height: 50%;
+  }
+  .competence-block .competence-level {
+    width: 90%;
+    height: 25%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about-block {
+    flex-direction: column;
+  }
+  .about-block .about-block__information {
+    width: 90%;
+    text-align: center;
+  }
+}
 @keyframes image-of-person-rotate {
   0% {
     transform: rotateZ(0deg);
