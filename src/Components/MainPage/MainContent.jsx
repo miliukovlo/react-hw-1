@@ -1,10 +1,11 @@
 import React from 'react';
+import AboutMeBlock from './AboutUser';
 
 const MainContent = () => {
     return (
         <>
-            <main>
-                <h1>HELLO WORLD</h1>
+            <main className='main-content'>
+                <AboutMeBlock/>
             </main>
         </>
     );

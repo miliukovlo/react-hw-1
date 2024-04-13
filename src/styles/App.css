@@ -2,6 +2,9 @@ header {
   width: 100%;
   height: 10vh;
   background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 header nav {
   display: flex;
@@ -29,6 +32,20 @@ header nav ul a:hover {
 }
 header nav ul a:visited {
   color: #d6d6d6;
+}
+header button {
+  width: 5%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+header button img {
+  width: 100%;
+  height: 100%;
 }
 
 .main-login {
@@ -80,10 +97,20 @@ header nav ul a:visited {
   color: #222222;
   background-color: transparent;
   margin-top: 5%;
+  cursor: pointer;
 }
 .main-login .main-login__button:hover {
   background-color: #222222;
   color: #d6d6d6;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d6d6d6;
 }
 
 .about-block {
@@ -92,30 +119,14 @@ header nav ul a:visited {
   min-height: 300px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-.about-block .about-block__image {
-  width: 20vh;
-  height: 20vh;
-  min-height: 170px;
-  min-width: 170px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
   justify-content: center;
-  cursor: pointer;
-  align-items: flex-start;
-  border: 1px solid transparent;
-  transition-duration: 0.95s;
-}
-.about-block .about-block__image:hover {
-  animation: image-of-person-rotate 2s linear infinite;
-  border: 1px solid #222222;
 }
 .about-block .about-block__information {
-  width: 40%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  text-align: center;
   word-wrap: break-word;
+  border-bottom: 2px solid #222222;
 }
 .about-block .about-block__information p {
   font-size: 4vh;
