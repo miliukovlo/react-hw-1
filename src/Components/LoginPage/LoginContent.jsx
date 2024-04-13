@@ -18,7 +18,7 @@ const LoginContent = () => {
             setError(true)
         } else {
             localStorage.setItem('login', true)
-            localStorage.setItem('nameOfUser', JSON.stringify({nameOfUser}))
+            localStorage.setItem('nameOfUser', JSON.stringify(nameOfUser))
             contextOfUser.setNameOfUser(nameOfUser)
             contextLogin.setIsLogin(true)
             setNameOfUser('')
