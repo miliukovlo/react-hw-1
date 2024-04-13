@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import Input from '../UI/Input';
 import Button from '../UI/Button';
-import { userContext } from '../../Context/Context';
+import { loginContext, userContext } from '../../Context/Context';
 
 const LoginContent = () => {
     const [nameOfUser, setNameOfUser] = useState('')
     const [error, setError] = useState(false)
     const contextOfUser = useContext(userContext)
+    const contextLogin = useContext(loginContext)
 
     const changeNameOfUser = (e) => {
         setNameOfUser(e.target.value)
@@ -17,8 +18,9 @@ const LoginContent = () => {
             setError(true)
         } else {
             localStorage.setItem('login', true)
-            localStorage.setItem('nameOfUser', {nameOfUser})
+            localStorage.setItem('nameOfUser', JSON.stringify({nameOfUser}))
             contextOfUser.setNameOfUser(nameOfUser)
+            contextLogin.setIsLogin(true)
             setNameOfUser('')
             setError('')
         }
