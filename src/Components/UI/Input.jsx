@@ -5,7 +5,9 @@ const Input = ({
     onChangeFunc,
     InputValue,
     InputClass,
-    InputType
+    InputType,
+    InputMin,
+    InputMax
 }) => {
     return (
         <>
@@ -15,6 +17,8 @@ const Input = ({
                 value={InputValue}
                 className={InputClass}
                 type={InputType}
+                min={InputMin}
+                max={InputMax}
             />
         </>
     );

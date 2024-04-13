@@ -32,6 +32,7 @@ const LoginContent = () => {
                 <h1>Страница входа</h1>
                 <Input
                 onChangeFunc={changeNameOfUser}
+                InputType={'text'}
                 InputValue={nameOfUser}
                 InputPlaceholder={'Введите имя'}
                 InputClass={'main-login__input'}

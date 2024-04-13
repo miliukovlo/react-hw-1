@@ -16,7 +16,7 @@ const App = () => {
       setIsLogin(true)
     }
     if (localStorage.getItem('nameOfUser')) {
-      setNameOfUser(JSON.parse(localStorage.getItem('login')))
+      setNameOfUser(JSON.parse(localStorage.getItem('nameOfUser')))
     }
   },[])
 

@@ -31,7 +31,7 @@ const Header = () => {
                             //  из массива navHref
                             navHref.map(navEl => {
                                 return (
-                                    <a href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
+                                    <a key={navEl.id} href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
                                 )
                             })
                         }
