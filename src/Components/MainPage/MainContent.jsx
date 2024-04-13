@@ -22,6 +22,11 @@ const MainContent = () => {
         e.preventDefault();
         setCompetences(prevCompetences => [...prevCompetences, newCompetence]);
     };
+
+    const deleteCompetence = (e, idOfCompetence) => {
+        e.preventDefault();
+        setCompetences(competences.filter(el => el.idOfCompetence !== idOfCompetence))
+    }
     
     return (
         <>
@@ -32,6 +37,7 @@ const MainContent = () => {
                 />
                 <CompetenceList
                     competenceList={competences}
+                    deleteCompetence={deleteCompetence}
                 />
             </main>
         </>

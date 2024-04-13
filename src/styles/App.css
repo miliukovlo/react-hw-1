@@ -110,6 +110,7 @@ header button img {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  min-height: 80vh;
   background-color: #d6d6d6;
 }
 .main-content .about-block {
@@ -308,9 +309,26 @@ header button img {
   justify-content: space-around;
   border-radius: 8px;
 }
+.competence-block .delete-block {
+  width: 4%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+.competence-block .delete-block button {
+  border: 0;
+  background-color: transparent;
+}
+.competence-block .delete-block img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
 .competence-block h2 {
   font-size: 2.2vh;
-  width: 25%;
+  width: 20%;
   text-align: center;
   word-wrap: break-word;
   height: 100%;

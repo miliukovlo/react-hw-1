@@ -114,6 +114,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    min-height: 80vh;
     background-color: $secondary-color;
     .about-block {
         width: 90%;
@@ -310,9 +311,26 @@ header {
     align-items: center;
     justify-content: space-around;
     border-radius: 8px;
+    .delete-block {
+        width: 4%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1%;
+        button {
+            border: 0;
+            background-color: transparent;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
     h2 {
         font-size: 2.2vh;
-        width: 25%;
+        width: 20%;
         text-align: center;
         word-wrap: break-word;
         height: 100%;
