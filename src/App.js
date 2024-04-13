@@ -1,18 +1,17 @@
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Main from './Components/Main';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './styles/App.css';
 
 import React from 'react';
+import LoginPage from './Pages/LoginPage';
 
 const App = () => {
   return (
-    <>
-      <Header/>
-      {/* Компонент Main создан для помещения туда основного контента */}
-      <Main/>
-      <Footer/>
-    </>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LoginPage/>}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
