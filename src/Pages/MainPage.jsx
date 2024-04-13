@@ -1,11 +1,14 @@
 import React from 'react';
+import Header from './../Components/Common/Header';
+import MainContent from '../Components/MainPage/MainContent';
+import Footer from './../Components/Common/Footer';
 
 const MainPage = () => {
     return (
         <>
-            <main>
-                <h1>HELLO WORLD!</h1>
-            </main>
+            <Header/>
+            <MainContent/>
+            <Footer/>
         </>
     );
 }
