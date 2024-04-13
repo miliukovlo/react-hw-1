@@ -41,7 +41,7 @@ header {
     height: 80vh;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: $secondary-color;
     h1 { 
         width: 90%;
@@ -50,6 +50,33 @@ header {
         text-align: center;
         border-radius: 3px;
         color: $main-color;
+    }
+    .main-login__input {
+        height: 10%;
+        width: 60%;
+        min-height: 50px;
+        border-radius: 12px;
+        outline: 0;
+        border: 1px solid $main-color;
+        text-indent: 10px;
+        color:$main-color;
+        margin-top: 5%;
+    }
+    .main-login__button {
+        height: 10%;
+        width: 50%;
+        min-height: 50px;
+        border-radius: 12px;
+        transition-duration: 0.4s;
+        border: 1px solid $main-color;
+        text-indent: 10px;
+        color:$main-color;
+        background-color: transparent;
+        margin-top: 5%;
+    }
+    .main-login__button:hover {
+        background-color: $main-color;
+        color: $secondary-color;
     }
 }
 .about-block {

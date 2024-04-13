@@ -37,7 +37,7 @@ header nav ul a:visited {
   height: 80vh;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   background-color: #d6d6d6;
 }
 .main-login h1 {
@@ -47,6 +47,33 @@ header nav ul a:visited {
   text-align: center;
   border-radius: 3px;
   color: #222222;
+}
+.main-login .main-login__input {
+  height: 10%;
+  width: 60%;
+  min-height: 50px;
+  border-radius: 12px;
+  outline: 0;
+  border: 1px solid #222222;
+  text-indent: 10px;
+  color: #222222;
+  margin-top: 5%;
+}
+.main-login .main-login__button {
+  height: 10%;
+  width: 50%;
+  min-height: 50px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  border: 1px solid #222222;
+  text-indent: 10px;
+  color: #222222;
+  background-color: transparent;
+  margin-top: 5%;
+}
+.main-login .main-login__button:hover {
+  background-color: #222222;
+  color: #d6d6d6;
 }
 
 .about-block {
