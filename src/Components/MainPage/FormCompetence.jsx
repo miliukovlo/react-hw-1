@@ -20,7 +20,7 @@ const FormCompetence = ({addNewCompetence}) => {
     const addCompetence = (e) => {
         if (title !== '' && description !== '') {
             addNewCompetence(e,{
-                levelOfCompetence: level,
+                levelOfCompetence: level > 100 ? 100 : level,
                 nameOfCompetence: title,
                 informationAboutCompetence: description,
                 idOfCompetence: Math.floor(Math.random() * 1000000)
