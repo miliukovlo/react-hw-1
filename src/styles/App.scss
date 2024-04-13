@@ -355,6 +355,20 @@ header {
         text-align: center;
     }
 }
+.filter-block {
+    height: 10vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    select {
+        height: 50%;
+        outline: 0;
+        border-radius: 12px;
+        border: 1px solid $main-color;
+        text-indent: 10px;
+    }
+}
 .can {
     border: 2px solid $competence-can;
 }

@@ -353,6 +353,21 @@ header button img {
   text-align: center;
 }
 
+.filter-block {
+  height: 10vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.filter-block select {
+  height: 50%;
+  outline: 0;
+  border-radius: 12px;
+  border: 1px solid #222222;
+  text-indent: 10px;
+}
+
 .can {
   border: 2px solid #006400;
 }
