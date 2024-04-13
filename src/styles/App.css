@@ -48,6 +48,16 @@ header nav ul a:visited {
   border-radius: 3px;
   color: #222222;
 }
+.main-login .error-text {
+  font-size: 2vh;
+  color: rgb(153, 0, 0);
+  transition-duration: 0.4s;
+}
+.main-login .error-text__no {
+  font-size: 2vh;
+  color: transparent;
+  transition-duration: 0.4s;
+}
 .main-login .main-login__input {
   height: 10%;
   width: 60%;

@@ -5,10 +5,23 @@ import { userContext } from '../../Context/Context';
 
 const LoginContent = () => {
     const [nameOfUser, setNameOfUser] = useState('')
+    const [error, setError] = useState(false)
     const contextOfUser = useContext(userContext)
 
     const changeNameOfUser = (e) => {
         setNameOfUser(e.target.value)
+    }
+
+    const loginUser = () => {
+        if (nameOfUser === '') {
+            setError(true)
+        } else {
+            localStorage.setItem('login', true)
+            localStorage.setItem('nameOfUser', {nameOfUser})
+            contextOfUser.setNameOfUser(nameOfUser)
+            setNameOfUser('')
+            setError('')
+        }
     }
 
     return (
@@ -21,9 +34,11 @@ const LoginContent = () => {
                 InputPlaceholder={'Введите имя'}
                 InputClass={'main-login__input'}
                 />
+                <p className={error ? "error-text" : 'error-text__no'}>Вы не ввели имя!</p>
                 <Button
                     buttonText={'Войти'}
                     buttonClass={'main-login__button'}
+                    buttonFunction={loginUser}
                 />
             </main>
         </>
