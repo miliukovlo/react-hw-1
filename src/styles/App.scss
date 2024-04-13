@@ -280,10 +280,20 @@ header {
             background-color: $main-color;
             color: $secondary-color;
         }
+        .error-text {
+            font-size: 2vh;
+            color: $error-color;
+            transition-duration: 0.4s;
+        }
+        .error-text__no {
+            font-size: 2vh;
+            color: transparent;
+            transition-duration: 0.4s;
+        }
     }
 }
 .competence-list {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: center;

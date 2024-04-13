@@ -278,9 +278,19 @@ header button img {
   background-color: #222222;
   color: #d6d6d6;
 }
+.main-content .main-form .error-text {
+  font-size: 2vh;
+  color: rgb(153, 0, 0);
+  transition-duration: 0.4s;
+}
+.main-content .main-form .error-text__no {
+  font-size: 2vh;
+  color: transparent;
+  transition-duration: 0.4s;
+}
 
 .competence-list {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: center;

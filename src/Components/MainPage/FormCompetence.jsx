@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Input from '../UI/Input'
 import Button from '../UI/Button';
 
-const FormCompetence = () => {
+const FormCompetence = ({addNewCompetence}) => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [level, setLevel] = useState(0)
+    const [error, setError] = useState(false)
 
     const changeTitle = (e) => {
         setTitle(e.target.value)
@@ -16,10 +17,28 @@ const FormCompetence = () => {
     const changeLevel = (e) => {
         setLevel(e.target.value)
     }
+    const addCompetence = (e) => {
+        if (title !== '' && description !== '') {
+            addNewCompetence(e,{
+                levelOfCompetence: level,
+                nameOfCompetence: title,
+                informationAboutCompetence: description,
+                idOfCompetence: Math.floor(Math.random() * 1000000)
+            })
+            setTitle('')
+            setLevel(0)
+            setDescription(0)
+            setError(false)
+        } else {
+            e.preventDefault();
+            setError(true)
+        }
+}
 
     return (
         <>
             <form className='main-form'>
+                <p className={error ? 'error-text' : 'error-text__no'}>Вы не ввели назваие или описание конпетенции!</p>
                 <div className="main-form__inputs-block">
                     <Input
                         InputType={'text'}
@@ -59,7 +78,7 @@ const FormCompetence = () => {
                 <Button
                     buttonClass={'main-form__button'}
                     buttonText={'Создать новую компетенцию'}
-                    buttonFunction={''}
+                    buttonFunction={addCompetence}
                 />
             </form>
         </>

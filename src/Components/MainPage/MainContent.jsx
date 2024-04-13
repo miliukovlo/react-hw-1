@@ -18,11 +18,18 @@ const MainContent = () => {
             idOfCompetence: 2
         },
     ])
+    const addNewCompetence = (e, newCompetence) => {
+        e.preventDefault();
+        setCompetences(prevCompetences => [...prevCompetences, newCompetence]);
+    };
+    
     return (
         <>
             <main className='main-content'>
                 <AboutMeBlock/>
-                <FormCompetence/>
+                <FormCompetence
+                    addNewCompetence={addNewCompetence}
+                />
                 <CompetenceList
                     competenceList={competences}
                 />
