@@ -1,18 +1,19 @@
 import React from 'react';
 
 const Input = ({
-    placeholderOfThisInput,
+    InputPlaceholder,
     onChangeFunc,
-    valueOfThisInput
+    InputValue,
+    InputClass
 }) => {
     return (
         <>
             <input 
                 type="text"
                 onChange={onChangeFunc}
-                placeholder={placeholderOfThisInput}
-                value={valueOfThisInput}
-                className='input-main'
+                placeholder={InputPlaceholder}
+                value={InputValue}
+                className={InputClass}
             />
         </>
     );
