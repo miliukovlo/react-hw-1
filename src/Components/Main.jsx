@@ -103,6 +103,12 @@ const Main = () => {
             isICan: false,
             nameOfCompetence: 'Выбор правильного стека и решений в разработке',
             informationAboutCompetence: 'Это очень важная часть в работе разработчиком, я хотел бы разобраться как правильно выбирать технологии для проекта и какие решения лучше принимать в разработке.'
+        },
+        {
+            id: 16,
+            isICan: true,
+            nameOfCompetence: 'Я просто забыл открыть PR...',
+            informationAboutCompetence: 'Простите пожалуйста...'
         }
     ])
     return (
