@@ -1,0 +1,15 @@
+.countdown-timer__block {
+    height: 10%;
+    width: 30%;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    transition-duration: 0.4s;
+}
+.countdown-timer__block:hover {
+    color: #d6d6d6;
+    background-color: #222222;
+}
