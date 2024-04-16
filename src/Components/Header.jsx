@@ -4,10 +4,12 @@ const Header = () => {
     // массив ссылок и их описания
     const navHref = [
         {
+            id: 1,
             navText: 'Вернуться на GitHub',
             href: 'https://github.com/ssadown/react-hw-1'
         },
         {
+            id: 2,
             navText: 'Написать в Telegram',
             href: 'https://t.me/Yaquya'
         }
@@ -25,7 +27,7 @@ const Header = () => {
                             //  из массива navHref
                             navHref.map(navEl => {
                                 return (
-                                    <a href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
+                                    <a key={navEl.id} href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
                                 )
                             })
                         }
