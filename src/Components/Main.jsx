@@ -1,6 +1,7 @@
 import React from 'react';
 import CountdownTimer from './CountdownTimer';
 import UserList from './UserList';
+import WindowSize from './WindowSize';
 
 const Main = () => {
     return (
@@ -8,6 +9,7 @@ const Main = () => {
             <main>
                 <CountdownTimer/>
                 <UserList/>
+                <WindowSize/>
             </main>
         </>
     );

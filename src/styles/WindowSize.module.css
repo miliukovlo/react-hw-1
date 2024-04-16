@@ -1,0 +1,10 @@
+.window-size__block {
+    width: 90%;
+    margin: 10px;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5vh;
+}
