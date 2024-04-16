@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/UserList.module.css';
+import UserBlock from './UserBlock';
 
 const UserList = () => {
     const [users, setUsers] = useState([])
@@ -23,11 +24,18 @@ const UserList = () => {
     }, [])
     return (
         <>
-            {users.map(user => {
-                return (
-                    <li key={user.id}>1</li>
-                )
-            })}
+            <div className={styles["user-list"]}>
+                {users.map(user => {
+                    return (
+                        <UserBlock
+                        key={user.id}
+                        name={user.name}
+                        username={user.username}
+                        email={user.email}
+                        />
+                    )
+                })}
+            </div>
         </>
     );
 }
