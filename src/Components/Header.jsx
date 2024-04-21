@@ -14,8 +14,6 @@ const Header = () => {
     ]
 
     return (
-        <>
-        {/* Header  в котором хранится информация о доступных сслыках */}
             <header>
                 <nav>
                     <ul>
@@ -32,7 +30,6 @@ const Header = () => {
                     </ul>
                 </nav>
             </header>
-        </>
     );
 }
 
