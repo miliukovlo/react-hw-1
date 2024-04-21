@@ -5,7 +5,7 @@ import WindowSize from './WindowSize';
 
 const Main = () => {
     return (
-            <main>
+            <main className='content'>
                 <CountdownTimer/>
                 <UserList/>
                 <WindowSize/>

@@ -36,21 +36,13 @@ $competence-cant: #8b0000;
         }
     }
 }
-main {
+.content {
     width: 100%;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $secondary-color;
-    h1 { 
-        width: 70%;
-        padding: 20px;
-        border-bottom: 3px solid $main-color;
-        text-align: center;
-        border-radius: 3px;
-        color: $main-color;
-    }
 }
 
 
