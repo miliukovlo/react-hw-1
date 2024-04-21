@@ -6,14 +6,12 @@ const Button = ({
     buttonClass
 }) => {
     return (
-        <>
             <button 
             onClick={buttonFunction}
             className={buttonClass}
             >
                 {buttonText}
             </button>
-        </>
     );
 }
 

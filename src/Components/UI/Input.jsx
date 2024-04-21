@@ -10,7 +10,6 @@ const Input = ({
     InputMax
 }) => {
     return (
-        <>
             <input 
                 onChange={onChangeFunc}
                 placeholder={InputPlaceholder}
@@ -20,7 +19,6 @@ const Input = ({
                 min={InputMin}
                 max={InputMax}
             />
-        </>
     );
 }
 
