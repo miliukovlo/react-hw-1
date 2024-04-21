@@ -11,7 +11,7 @@ const AboutMeBlock = ({imageOfPerson, nameOfPerson}) => {
                     />
                 </div>
                 <div className="about-block__information">
-                    <p>{nameOfPerson}</p>
+                    <p className='information__name'>{nameOfPerson}</p>
                 </div>
             </div>
         </>
