@@ -20,12 +20,10 @@ const WindowSize = () => {
     }, [])
 
     return (
-        <>
             <div className={styles['window-size__block']}>
                 <h2>Высота окна: {height}</h2>
                 <h2>Ширина окна: {width}</h2>
             </div>
-        </>
     );
 }
 

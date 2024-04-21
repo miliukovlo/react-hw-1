@@ -5,13 +5,11 @@ import WindowSize from './WindowSize';
 
 const Main = () => {
     return (
-        <>
             <main>
                 <CountdownTimer/>
                 <UserList/>
                 <WindowSize/>
             </main>
-        </>
     );
 }
 

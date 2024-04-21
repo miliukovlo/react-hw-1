@@ -7,13 +7,11 @@ const UserBlock = ({
     email
 }) => {
     return (
-        <>
             <div className={styles['user-block']}>
                 <p>Имя: {name}</p>
                 <p>Ник: {username}</p>
                 <p>Email: {email}</p>
             </div>
-        </>
     );
 }
 

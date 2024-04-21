@@ -23,7 +23,6 @@ const UserList = () => {
             .catch(error => console.error(error))
     }, [])
     return (
-        <>
             <div className={styles["user-list"]}>
                 {users.map(user => {
                     return (
@@ -36,7 +35,6 @@ const UserList = () => {
                     )
                 })}
             </div>
-        </>
     );
 }
 
