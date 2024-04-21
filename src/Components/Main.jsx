@@ -114,13 +114,12 @@ const myCompetence = [
 const Main = () => {
 
     return (
-        <>
-            <main>
+            <main className='content'>
                 <AboutMeBlock
                     imageOfPerson={infoAboutPerson.imageOfPerson}
                     nameOfPerson={infoAboutPerson.nameOfPerson}
                 />
-                <h1>Что я умею и могу использовать</h1> 
+                <h1 className='content-header__text'>Что я умею и могу использовать</h1> 
                 {myCompetence.map(competence => {
                     if (competence.isICan) {
                         return (
@@ -135,7 +134,7 @@ const Main = () => {
                     }
                     return true
                 })}
-                <h1>Что я не умею использовать, либо хочу улучшить навык</h1>
+                <h1 className='content-header__text'>Что я не умею использовать, либо хочу улучшить навык</h1>
                 {myCompetence.map(competence => {
                     if (!competence.isICan) {
                         return (
@@ -151,7 +150,6 @@ const Main = () => {
                     return true
                 })}
             </main>
-        </>
     );
 }
 
