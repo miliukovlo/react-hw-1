@@ -2,7 +2,22 @@ import React, { useEffect, useState } from 'react';
 import AboutMeBlock from './AboutUser';
 import FormCompetence from './FormCompetence';
 import CompetenceList from './CompetenceList';
-import FilterCompetents from './FilterCompetents';
+import FilterCompetences from './FilterCompetents';
+
+const filterChangeList = [
+    {
+        id: 1,
+        nameOfOption: 'Показать все компетенции'
+    },
+    {
+        id: 2,
+        nameOfOption: 'Показать компетенции с уровнем > 50'
+    },
+    {
+        id: 3,
+        nameOfOption: 'Показать компетенции с уровнем <= 50'
+    }
+]
 
 const MainContent = () => {
     const [competences, setCompetences] = useState([
@@ -19,22 +34,8 @@ const MainContent = () => {
             idOfCompetence: 2
         },
     ])
-    const [filterCompetents, setFilterCompetents] = useState(competences)
+    const [filterCompetences, setFilterCompetences] = useState(competences)
     const [filterOption, setFilterOption] = useState(1)
-    const [filterChangeList, setFilterChangeList] = useState([
-        {
-            id: 1,
-            nameOfOption: 'Показать все компетенции'
-        },
-        {
-            id: 2,
-            nameOfOption: 'Показать компетенции с уровнем >50'
-        },
-        {
-            id: 3,
-            nameOfOption: 'Показать компетенции с уровнем <=50'
-        }
-    ]) 
 
 
     const addNewCompetence = (e, newCompetence) => {
@@ -53,11 +54,11 @@ const MainContent = () => {
 
     useEffect(() => {
         if (filterOption === 1) {
-            setFilterCompetents(competences)
+            setFilterCompetences(competences)
         } else if (filterOption === 2) {
-            setFilterCompetents(competences.filter(el => el.levelOfCompetence < 50))
+            setFilterCompetences(competences.filter(el => el.levelOfCompetence < 50))
         } else if (filterOption === 3) {
-            setFilterCompetents(competences.filter(el => el.levelOfCompetence >= 50))
+            setFilterCompetences(competences.filter(el => el.levelOfCompetence >= 50))
         }
     }, [filterOption, competences])
     
@@ -68,12 +69,12 @@ const MainContent = () => {
                 <FormCompetence
                     addNewCompetence={addNewCompetence}
                 />
-                <FilterCompetents
+                <FilterCompetences
                     filterChangeList={filterChangeList}
                     changeSelect={changeSelect}
                 />
                 <CompetenceList
-                    competenceList={filterCompetents}
+                    competenceList={filterCompetences}
                     deleteCompetence={deleteCompetence}
                 />
             </main>

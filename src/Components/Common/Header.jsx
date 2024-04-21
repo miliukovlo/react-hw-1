@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import ExitButton from '../Header/ExitButton';
 import { loginContext } from '../../Context/Context';
 
-const Header = () => {
     // массив ссылок и их описания
     const navHref = [
         {
@@ -17,11 +16,11 @@ const Header = () => {
         }
     ]
 
+const Header = () => {
+
     const isLoginContext = useContext(loginContext)
 
     return (
-        <>
-        {/* Header  в котором хранится информация о доступных сслыках */}
             <header>
                 <nav>
                     <ul>
@@ -31,7 +30,9 @@ const Header = () => {
                             //  из массива navHref
                             navHref.map(navEl => {
                                 return (
-                                    <a key={navEl.id} href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
+                                    <li key={navEl.id}>
+                                        <a href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
+                                    </li>
                                 )
                             })
                         }
@@ -39,7 +40,6 @@ const Header = () => {
                 </nav>
                 {isLoginContext.isLogin && (<ExitButton/>)}
             </header>
-        </>
     );
 }
 

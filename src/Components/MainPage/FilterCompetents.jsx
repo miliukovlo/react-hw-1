@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const FilterCompetents = ({
+const FilterCompetences = ({
     changeSelect,
     filterChangeList
 }) => {
@@ -20,4 +20,4 @@ const FilterCompetents = ({
     );
 }
 
-export default FilterCompetents;
+export default FilterCompetences;
