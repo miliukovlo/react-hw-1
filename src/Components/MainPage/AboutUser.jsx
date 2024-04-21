@@ -8,7 +8,7 @@ const AboutUser = () => {
         <>
             <div className="about-block">
                 <div className="about-block__information">
-                    <p>{contextOfUser.nameOfUser}</p>
+                    <p className='information-name'>{contextOfUser.nameOfUser}</p>
                 </div>
             </div>
         </>

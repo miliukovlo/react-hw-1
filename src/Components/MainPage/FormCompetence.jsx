@@ -44,14 +44,14 @@ const FormCompetence = ({addNewCompetence}) => {
                         InputType={'text'}
                         InputValue={title}
                         InputPlaceholder={'Введите название компетенции'}
-                        InputClass={''}
+                        InputClass={'form-block__input'}
                         onChangeFunc={changeTitle}
                     />
                     <Input
                         InputType={'text'}
                         InputValue={description}
                         InputPlaceholder={'Введите описание компетенции'}
-                        InputClass={''}
+                        InputClass={'form-block__input'}
                         onChangeFunc={changeDescription}
                     />
                     <div className="main-form__range-block">
@@ -59,7 +59,7 @@ const FormCompetence = ({addNewCompetence}) => {
                             InputType={'number'}
                             InputValue={level}
                             InputPlaceholder={'Укажите ваш уровень'}
-                            InputClass={''}
+                            InputClass={'range-block__input'}
                             onChangeFunc={changeLevel}
                             InputMax='100'
                             InputMin='0'
@@ -68,7 +68,7 @@ const FormCompetence = ({addNewCompetence}) => {
                             InputType={'range'}
                             InputValue={level}
                             InputPlaceholder={'Укажите ваш уровень'}
-                            InputClass={''}
+                            InputClass={'range-block__input-range'}
                             onChangeFunc={changeLevel}
                             InputMax='100'
                             InputMin='0'

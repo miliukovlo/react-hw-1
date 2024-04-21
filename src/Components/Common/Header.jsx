@@ -21,9 +21,9 @@ const Header = () => {
     const isLoginContext = useContext(loginContext)
 
     return (
-            <header>
-                <nav>
-                    <ul>
+            <header className='header'>
+                <nav className='header-nav'>
+                    <ul className='header-nav__list'>
                         {
                             // Чтобы не прописывать каждый элемент по отдельности, используется метод map,
                             //  который будет возвращать ссылку для каждого отдельного объекта
@@ -31,7 +31,7 @@ const Header = () => {
                             navHref.map(navEl => {
                                 return (
                                     <li key={navEl.id}>
-                                        <a href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
+                                        <a className='nav-list__element' href={navEl.href} target='_blank' rel="noreferrer">{navEl.navText}</a>
                                     </li>
                                 )
                             })

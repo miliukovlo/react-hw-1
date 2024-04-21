@@ -29,7 +29,7 @@ const LoginContent = () => {
     return (
         <>
             <main className='main-login'>
-                <h1>Страница входа</h1>
+                <h1 className='login-header__text'>Страница входа</h1>
                 <Input
                 onChangeFunc={changeNameOfUser}
                 InputType={'text'}

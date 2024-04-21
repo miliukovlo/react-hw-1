@@ -4,41 +4,41 @@ $competence-can: #006400;
 $competence-cant: #8b0000;
 $error-color: rgb(153, 0, 0);
 
-header {
+.header {
     width: 100%;
     height: 10vh;
     background-color: rgba($color: $main-color, $alpha: 1.0);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    nav {
+    .header-nav {
         display: flex;
         width: 90%;
         height: 100%;
         align-items: center;
         justify-content: center;
-        ul {
+        .header-nav__list {
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            a {
+            .nav-list__element {
                 text-decoration: none;
                 color: $secondary-color;
                 transition-duration: 0.4s;
                 border-bottom: 1px solid transparent;
                 padding: 5px 10px;
             }
-            a:hover {
+            .nav-list__element:hover {
                 border-bottom: 1px solid $secondary-color;
             }
-            a:visited {
+            .nav-list__element:visited {
                 color: $secondary-color
             }
         }
     }
-    button {
+    .header-button__exit {
         width: 5%;
         height: 50%;
         display: flex;
@@ -47,7 +47,7 @@ header {
         background-color: transparent;
         border: 0;
         cursor: pointer;
-        img {
+        .button-exit__image {
             width: 100%;
             height: 100%;
         }
@@ -61,7 +61,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     background-color: $secondary-color;
-    h1 { 
+    .login-header__text { 
         width: 90%;
         padding: 20px;
         border-bottom: 3px solid $main-color;
@@ -129,7 +129,7 @@ header {
             text-align: center;
             word-wrap: break-word;
             border-bottom: 2px solid $main-color;
-            p {
+            .information-name {
                 font-size: 4vh;
                 color: $main-color;
             }
@@ -151,7 +151,7 @@ header {
             justify-content: space-around;
             align-items: flex-start;
         }
-        input {
+        .form-block__input {
             width: 20%;
             height: 15%;
             min-height: 50px;
@@ -169,10 +169,11 @@ header {
             align-items: center;
             justify-content: space-between;
             position: relative;
-            input {
+            .range-block__input {
                 width: 100%;
+                border-radius: 8px;
             }
-            input[type=range] {
+            .range-block__input-range {
                 height: 32px;
                 -webkit-appearance: none;
                 margin: 10px 0;
@@ -180,10 +181,10 @@ header {
                 border: 0;
                 background-color: transparent;
             }
-            input[type=range]:focus {
+            .range-block__input-range:focus {
                 outline: none;
             }
-            input[type=range]::-webkit-slider-runnable-track {
+            .range-block__input-range::-webkit-slider-runnable-track {
                 width: 100%;
                 height: 8px;
                 cursor: pointer;
@@ -193,7 +194,7 @@ header {
                 border-radius: 5px;
                 border: 0px solid #000000;
             }
-            input[type=range]::-webkit-slider-thumb {
+            .range-block__input-range::-webkit-slider-thumb {
                 box-shadow: 0px 0px 6px #000000;
                 border: 1px solid #000000;
                 height: 25px;
@@ -204,10 +205,10 @@ header {
                 -webkit-appearance: none;
                 margin-top: -9px;
             }
-            input[type=range]:focus::-webkit-slider-runnable-track {
+            .range-block__input-range:focus::-webkit-slider-runnable-track {
                 background: #050C12;
             }
-            input[type=range]::-moz-range-track {
+            .range-block__input-range::-moz-range-track {
                 width: 100%;
                 height: 8px;
                 cursor: pointer;
@@ -217,7 +218,7 @@ header {
                 border-radius: 5px;
                 border: 0px solid #000000;
             }
-            input[type=range]::-moz-range-thumb {
+            .range-block__input-range::-moz-range-thumb {
                 box-shadow: 0px 0px 6px #000000;
                 border: 1px solid #000000;
                 height: 25px;
@@ -226,7 +227,7 @@ header {
                 background: #FFFFFF;
                 cursor: pointer;
             }
-            input[type=range]::-ms-track {
+            .range-block__input-range::-ms-track {
                 width: 100%;
                 height: 8px;
                 cursor: pointer;
@@ -235,19 +236,19 @@ header {
                 border-color: transparent;
                 color: transparent;
             }
-            input[type=range]::-ms-fill-lower {
+            .range-block__input-range::-ms-fill-lower {
                 background: #050C12;
                 border: 0px solid #000000;
                 border-radius: 10px;
                 box-shadow: 0px 0px 0px #000000;
             }
-            input[type=range]::-ms-fill-upper {
+            .range-block__input-range::-ms-fill-upper {
                 background: #050C12;
                 border: 0px solid #000000;
                 border-radius: 10px;
                 box-shadow: 0px 0px 0px #000000;
             }
-            input[type=range]::-ms-thumb {
+            .range-block__input-range::-ms-thumb {
                 margin-top: 1px;
                 box-shadow: 0px 0px 6px #000000;
                 border: 1px solid #000000;
@@ -257,10 +258,10 @@ header {
                 background: #FFFFFF;
                 cursor: pointer;
             }
-            input[type=range]:focus::-ms-fill-lower {
+            .range-block__input-range:focus::-ms-fill-lower {
                 background: #050C12;
             }
-            input[type=range]:focus::-ms-fill-upper {
+            .range-block__input-range:focus::-ms-fill-upper {
                 background: #050C12;
             }
         }
@@ -318,17 +319,17 @@ header {
         justify-content: center;
         align-items: center;
         padding: 1%;
-        button {
+        .delete-block__button {
             border: 0;
             background-color: transparent;
         }
-        img {
+        .delete-block__image {
             width: 100%;
             height: 100%;
             cursor: pointer;
         }
     }
-    h2 {
+    .competence-name {
         font-size: 2.2vh;
         width: 20%;
         text-align: center;
@@ -336,18 +337,16 @@ header {
         height: 100%;
         color: $main-color;
     }
-    p {
-        font-size: 2vh;
-        word-wrap: break-word;
-        color: $main-color;
-    }
-    span {
+    .competence-level__number {
         font-size: 2vh;
         color: $main-color;
     }
     .competence-info {
         width: 50%;
         height: 100%;
+        font-size: 2vh;
+        word-wrap: break-word;
+        color: $main-color;
     }
     .competence-level {
         width: 25%;
@@ -361,7 +360,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    select {
+    .filter-block__select {
         height: 50%;
         outline: 0;
         border-radius: 12px;
@@ -375,14 +374,14 @@ header {
 .cant {
     border: 2px solid $competence-cant;
 }
-footer {
+.footer {
     width: 100%;
     height: 10vh;
     background-color: rgba($color: $main-color, $alpha: 1.0);
     display: flex;
     align-items: center;
     justify-content: center;
-    h1 {
+    .footer-text {
         width: 100%;
         text-align: center;
         color: $secondary-color;
@@ -393,7 +392,7 @@ footer {
     .competence-block {
         flex-direction: column;
         width: 70%;
-        h2 {
+        .competence-name {
             width: 90%;
             height: 25%;
         }
@@ -417,19 +416,10 @@ footer {
             text-align: center;
         }
     }
-    header {
-        a {
+    .header {
+        .nav-list__element {
             text-align: center;
         }
     }
     
-}
-
-@keyframes image-of-person-rotate {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(360deg);
-    }
 }

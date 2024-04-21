@@ -1,4 +1,4 @@
-header {
+.header {
   width: 100%;
   height: 10vh;
   background-color: #222222;
@@ -6,34 +6,34 @@ header {
   align-items: center;
   justify-content: space-around;
 }
-header nav {
+.header .header-nav {
   display: flex;
   width: 90%;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
-header nav ul {
+.header .header-nav .header-nav__list {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-header nav ul a {
+.header .header-nav .header-nav__list .nav-list__element {
   text-decoration: none;
   color: #d6d6d6;
   transition-duration: 0.4s;
   border-bottom: 1px solid transparent;
   padding: 5px 10px;
 }
-header nav ul a:hover {
+.header .header-nav .header-nav__list .nav-list__element:hover {
   border-bottom: 1px solid #d6d6d6;
 }
-header nav ul a:visited {
+.header .header-nav .header-nav__list .nav-list__element:visited {
   color: #d6d6d6;
 }
-header button {
+.header .header-button__exit {
   width: 5%;
   height: 50%;
   display: flex;
@@ -43,7 +43,7 @@ header button {
   border: 0;
   cursor: pointer;
 }
-header button img {
+.header .header-button__exit .button-exit__image {
   width: 100%;
   height: 100%;
 }
@@ -57,7 +57,7 @@ header button img {
   justify-content: flex-start;
   background-color: #d6d6d6;
 }
-.main-login h1 {
+.main-login .login-header__text {
   width: 90%;
   padding: 20px;
   border-bottom: 3px solid #222222;
@@ -128,7 +128,7 @@ header button img {
   word-wrap: break-word;
   border-bottom: 2px solid #222222;
 }
-.main-content .about-block .about-block__information p {
+.main-content .about-block .about-block__information .information-name {
   font-size: 4vh;
   color: #222222;
 }
@@ -149,7 +149,7 @@ header button img {
   justify-content: space-around;
   align-items: flex-start;
 }
-.main-content .main-form input {
+.main-content .main-form .form-block__input {
   width: 20%;
   height: 15%;
   min-height: 50px;
@@ -168,10 +168,11 @@ header button img {
   justify-content: space-between;
   position: relative;
 }
-.main-content .main-form .main-form__range-block input {
+.main-content .main-form .main-form__range-block .range-block__input {
   width: 100%;
+  border-radius: 8px;
 }
-.main-content .main-form .main-form__range-block input[type=range] {
+.main-content .main-form .main-form__range-block .range-block__input-range {
   height: 32px;
   -webkit-appearance: none;
   margin: 10px 0;
@@ -179,10 +180,10 @@ header button img {
   border: 0;
   background-color: transparent;
 }
-.main-content .main-form .main-form__range-block input[type=range]:focus {
+.main-content .main-form .main-form__range-block .range-block__input-range:focus {
   outline: none;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-webkit-slider-runnable-track {
+.main-content .main-form .main-form__range-block .range-block__input-range::-webkit-slider-runnable-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
@@ -192,7 +193,7 @@ header button img {
   border-radius: 5px;
   border: 0px solid #000000;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-webkit-slider-thumb {
+.main-content .main-form .main-form__range-block .range-block__input-range::-webkit-slider-thumb {
   box-shadow: 0px 0px 6px #000000;
   border: 1px solid #000000;
   height: 25px;
@@ -203,10 +204,10 @@ header button img {
   -webkit-appearance: none;
   margin-top: -9px;
 }
-.main-content .main-form .main-form__range-block input[type=range]:focus::-webkit-slider-runnable-track {
+.main-content .main-form .main-form__range-block .range-block__input-range:focus::-webkit-slider-runnable-track {
   background: #050C12;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-moz-range-track {
+.main-content .main-form .main-form__range-block .range-block__input-range::-moz-range-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
@@ -216,7 +217,7 @@ header button img {
   border-radius: 5px;
   border: 0px solid #000000;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-moz-range-thumb {
+.main-content .main-form .main-form__range-block .range-block__input-range::-moz-range-thumb {
   box-shadow: 0px 0px 6px #000000;
   border: 1px solid #000000;
   height: 25px;
@@ -225,7 +226,7 @@ header button img {
   background: #FFFFFF;
   cursor: pointer;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-ms-track {
+.main-content .main-form .main-form__range-block .range-block__input-range::-ms-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
@@ -234,19 +235,19 @@ header button img {
   border-color: transparent;
   color: transparent;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-ms-fill-lower {
+.main-content .main-form .main-form__range-block .range-block__input-range::-ms-fill-lower {
   background: #050C12;
   border: 0px solid #000000;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #000000;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-ms-fill-upper {
+.main-content .main-form .main-form__range-block .range-block__input-range::-ms-fill-upper {
   background: #050C12;
   border: 0px solid #000000;
   border-radius: 10px;
   box-shadow: 0px 0px 0px #000000;
 }
-.main-content .main-form .main-form__range-block input[type=range]::-ms-thumb {
+.main-content .main-form .main-form__range-block .range-block__input-range::-ms-thumb {
   margin-top: 1px;
   box-shadow: 0px 0px 6px #000000;
   border: 1px solid #000000;
@@ -256,10 +257,10 @@ header button img {
   background: #FFFFFF;
   cursor: pointer;
 }
-.main-content .main-form .main-form__range-block input[type=range]:focus::-ms-fill-lower {
+.main-content .main-form .main-form__range-block .range-block__input-range:focus::-ms-fill-lower {
   background: #050C12;
 }
-.main-content .main-form .main-form__range-block input[type=range]:focus::-ms-fill-upper {
+.main-content .main-form .main-form__range-block .range-block__input-range:focus::-ms-fill-upper {
   background: #050C12;
 }
 .main-content .main-form .main-form__button {
@@ -317,16 +318,16 @@ header button img {
   align-items: center;
   padding: 1%;
 }
-.competence-block .delete-block button {
+.competence-block .delete-block .delete-block__button {
   border: 0;
   background-color: transparent;
 }
-.competence-block .delete-block img {
+.competence-block .delete-block .delete-block__image {
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.competence-block h2 {
+.competence-block .competence-name {
   font-size: 2.2vh;
   width: 20%;
   text-align: center;
@@ -334,18 +335,16 @@ header button img {
   height: 100%;
   color: #222222;
 }
-.competence-block p {
-  font-size: 2vh;
-  word-wrap: break-word;
-  color: #222222;
-}
-.competence-block span {
+.competence-block .competence-level__number {
   font-size: 2vh;
   color: #222222;
 }
 .competence-block .competence-info {
   width: 50%;
   height: 100%;
+  font-size: 2vh;
+  word-wrap: break-word;
+  color: #222222;
 }
 .competence-block .competence-level {
   width: 25%;
@@ -360,7 +359,7 @@ header button img {
   align-items: center;
   justify-content: flex-end;
 }
-.filter-block select {
+.filter-block .filter-block__select {
   height: 50%;
   outline: 0;
   border-radius: 12px;
@@ -376,7 +375,7 @@ header button img {
   border: 2px solid #8b0000;
 }
 
-footer {
+.footer {
   width: 100%;
   height: 10vh;
   background-color: #222222;
@@ -384,7 +383,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
-footer h1 {
+.footer .footer-text {
   width: 100%;
   text-align: center;
   color: #d6d6d6;
@@ -396,7 +395,7 @@ footer h1 {
     flex-direction: column;
     width: 70%;
   }
-  .competence-block h2 {
+  .competence-block .competence-name {
     width: 90%;
     height: 25%;
   }
@@ -418,16 +417,8 @@ footer h1 {
     width: 90%;
     text-align: center;
   }
-  header a {
+  .header .nav-list__element {
     text-align: center;
-  }
-}
-@keyframes image-of-person-rotate {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
   }
 }
 

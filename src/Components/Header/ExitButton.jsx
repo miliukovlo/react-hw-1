@@ -17,7 +17,7 @@ const ExitButton = () => {
 
     return (
         <>
-            <button onClick={exitUser}><img src={ExitLogo} alt="Кнопка выхода"/></button>
+            <button className='header-button__exit' onClick={exitUser}><img className='button-exit__image' src={ExitLogo} alt="Кнопка выхода"/></button>
         </>
     );
 }
