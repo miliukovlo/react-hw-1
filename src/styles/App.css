@@ -116,6 +116,7 @@
 .competence-block .competence-level {
   width: 25%;
   height: 100%;
+  font-size: 2vh;
   text-align: center;
 }
 

@@ -111,6 +111,10 @@ const myCompetence = [
 }
 ]
 
+const myCurrentCompetencies = myCompetence.filter(item => !!item.isICan)
+
+const myFutureCompetencies = myCompetence.filter(item => !item.isICan)
+
 const Main = () => {
 
     return (
@@ -120,23 +124,19 @@ const Main = () => {
                     nameOfPerson={infoAboutPerson.nameOfPerson}
                 />
                 <h1 className='content-header__text'>Что я умею и могу использовать</h1> 
-                {myCompetence.map(competence => {
-                    if (competence.isICan) {
+                {myCurrentCompetencies.map(competence => {
                         return (
                             <Competence
-                                key={competence.id}
-                                isICan={competence.isICan}
-                                nameOfCompetence={competence.nameOfCompetence}
-                                informationAboutCompetence={competence.informationAboutCompetence}
-                                levelOfCompetence={competence.levelOfCompetence}
-                            />
+                            key={competence.id}
+                            isICan={competence.isICan}
+                            nameOfCompetence={competence.nameOfCompetence}
+                            informationAboutCompetence={competence.informationAboutCompetence}
+                            levelOfCompetence={competence.levelOfCompetence}
+                        />
                         )
-                    }
-                    return true
                 })}
                 <h1 className='content-header__text'>Что я не умею использовать, либо хочу улучшить навык</h1>
-                {myCompetence.map(competence => {
-                    if (!competence.isICan) {
+                {myFutureCompetencies.map(competence => {
                         return (
                             <Competence
                                 key={competence.id}
@@ -146,8 +146,6 @@ const Main = () => {
                                 levelOfCompetence={competence.levelOfCompetence}
                             />
                         )
-                    }
-                    return true
                 })}
             </main>
     );
