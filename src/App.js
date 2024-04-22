@@ -21,28 +21,26 @@ const App = () => {
   },[])
 
   return (
-    isLogin ? 
+
     <loginContext.Provider value={{isLogin, setIsLogin}}>
     <userContext.Provider value={{nameOfUser, setNameOfUser}}>
       <BrowserRouter>
         <Routes>
-          <Route path='/competent' element={<MainPage/>} exact/>
-          <Route path='*' element={<Navigate to='/competent' replace/>} exact/>
+          {isLogin ? 
+            <>
+              <Route path='/competent' element={<MainPage />} exact />
+              <Route path='*' element={<Navigate to='/competent' replace />} exact />
+            </>
+            :
+            <>
+              <Route path='/' element={<LoginPage />} exact />
+              <Route path='*' element={<Navigate to='/' replace />} exact />
+            </>  
+        }
         </Routes>
       </BrowserRouter>
     </userContext.Provider>
   </loginContext.Provider>
-  :
-  <loginContext.Provider value={{isLogin, setIsLogin}}>
-  <userContext.Provider value={{nameOfUser, setNameOfUser}}>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<LoginPage/>} exact/>
-        <Route path='*' element={<Navigate to='/' replace/>} exact/>
-      </Routes>
-    </BrowserRouter>
-  </userContext.Provider>
-</loginContext.Provider>
   );
 }
 
