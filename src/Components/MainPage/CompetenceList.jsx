@@ -9,11 +9,11 @@ const CompetenceList = ({competenceList, deleteCompetence}) => {
                             {competenceList.map(competence => {
                                 return (
                                     <Competence
-                                        key={competence.idOfCompetence}
-                                        nameOfCompetence={competence.nameOfCompetence}
-                                        informationAboutCompetence={competence.informationAboutCompetence}
-                                        levelOfCompetence={competence.levelOfCompetence}
-                                        idOfCompetence={competence.idOfCompetence}
+                                        key={competence.id}
+                                        name={competence.name}
+                                        description={competence.description}
+                                        level={competence.level}
+                                        id={competence.id}
                                         deleteCompetence={deleteCompetence}
                                     />
                                 )

@@ -22,19 +22,19 @@ const filterChangeList = [
 const MainContent = () => {
     const [competences, setCompetences] = useState([
         {    
-            levelOfCompetence: 79,
-            nameOfCompetence: 'HTML/CSS',
-            informationAboutCompetence: 'Умение верстать макеты, делать их адаптивными',
-            idOfCompetence: 1
+            level: 79,
+            name: 'HTML/CSS',
+            description: 'Умение верстать макеты, делать их адаптивными',
+            id: 1
         },
         {    
-            levelOfCompetence: 49,
-            nameOfCompetence: 'JS',
-            informationAboutCompetence: 'Умение верстать макеты, делать их адаптивными',
-            idOfCompetence: 2
+            level: 49,
+            name: 'JS',
+            description: 'Умение верстать макеты, делать их адаптивными',
+            id: 2
         },
     ])
-    const [filterCompetences, setFilterCompetences] = useState(competences)
+    const [filteredCompetences, setFilterCompetences] = useState(competences)
     const [filterOption, setFilterOption] = useState(1)
 
 
@@ -43,9 +43,9 @@ const MainContent = () => {
         setCompetences(prevCompetences => [...prevCompetences, newCompetence]);
     };
 
-    const deleteCompetence = (e, idOfCompetence) => {
+    const deleteCompetence = (e, id) => {
         e.preventDefault();
-        setCompetences(competences.filter(el => el.idOfCompetence !== idOfCompetence))
+        setCompetences(competences.filter(el => el.id !== id))
     }
 
     const changeSelect = (e) => {
@@ -56,9 +56,9 @@ const MainContent = () => {
         if (filterOption === 1) {
             setFilterCompetences(competences)
         } else if (filterOption === 2) {
-            setFilterCompetences(competences.filter(el => el.levelOfCompetence < 50))
+            setFilterCompetences(competences.filter(el => el.level < 50))
         } else if (filterOption === 3) {
-            setFilterCompetences(competences.filter(el => el.levelOfCompetence >= 50))
+            setFilterCompetences(competences.filter(el => el.level >= 50))
         }
     }, [filterOption, competences])
     
@@ -74,7 +74,7 @@ const MainContent = () => {
                     changeSelect={changeSelect}
                 />
                 <CompetenceList
-                    competenceList={filterCompetences}
+                    competenceList={filteredCompetences}
                     deleteCompetence={deleteCompetence}
                 />
             </main>

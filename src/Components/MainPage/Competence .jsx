@@ -2,22 +2,22 @@ import React from 'react';
 import DeleteIcon from '../../assets/delete-svgrepo-com.svg'
 
 const Competence = ({
-    nameOfCompetence,
-    informationAboutCompetence,
-    levelOfCompetence,
+    name,
+    description,
+    level,
     deleteCompetence,
-    idOfCompetence
+    id
 }) => {
     return (
         <>
         {/* Цвет границ блока зависит от значения isICan */}
-            <div className={levelOfCompetence >= 50 ? 'competence-block can' : 'competence-block cant'}>
+            <div className={level >= 50 ? 'competence-block can' : 'competence-block cant'}>
                 <div className="delete-block">
-                    <button className='delete-block__button' onClick={(e) => {deleteCompetence(e, idOfCompetence)}}><img className='delete-block__image' src={DeleteIcon} alt="Иконка удаления" /></button>
+                    <button className='delete-block__button' onClick={(e) => {deleteCompetence(e, id)}}><img className='delete-block__image' src={DeleteIcon} alt="Иконка удаления" /></button>
                 </div>
-                <h2 className='competence-name'>{nameOfCompetence}</h2>
-                <p className='competence-info'>{informationAboutCompetence}</p>
-                    <p className='competence-level'>Я оцениваю свою уровень на <span className='competence-level__number'>{levelOfCompetence}</span>%</p>
+                <h2 className='competence-name'>{name}</h2>
+                <p className='competence-info'>{description}</p>
+                    <p className='competence-level'>Я оцениваю свою уровень на <span className='competence-level__number'>{level}</span>%</p>
             </div>
         </>
     );
