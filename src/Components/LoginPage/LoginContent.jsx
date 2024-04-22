@@ -5,7 +5,7 @@ import { loginContext, userContext } from '../../Context/Context';
 
 const LoginContent = () => {
     const [nameOfUser, setNameOfUser] = useState('')
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(null)
     const contextOfUser = useContext(userContext)
     const contextLogin = useContext(loginContext)
 
@@ -21,8 +21,8 @@ const LoginContent = () => {
             localStorage.setItem('nameOfUser', JSON.stringify(nameOfUser))
             contextOfUser.setNameOfUser(nameOfUser)
             contextLogin.setIsLogin(true)
+            setError(false)
             setNameOfUser('')
-            setError('')
         }
     }
 
