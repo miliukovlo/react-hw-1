@@ -1,11 +1,11 @@
-import { filmsData } from "../data/filmsData"
+import { filmsData } from "../data/filmsData";
 
 export const useGetFilms = (number) => {
-    const allFilmsData = filmsData
+    const allFilmsData = filmsData;
 
-    if (typeof number === 'number') {
-        return allFilmsData.slice(0, number)
-    } else {
-        return console.error('number не число!')
+    if (!Number.isInteger(number) || number < 0) {
+        throw new Error('number должен быть целым числом и больше или равен нулю!');
     }
-}
+
+    return allFilmsData.slice(0, number);
+};

@@ -13,3 +13,7 @@
     font-size: 3vh;
     text-align: center;
 }
+.main-page__observer {
+    height: 20px;
+    width: 100%;
+}
