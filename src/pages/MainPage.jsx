@@ -1,28 +1,38 @@
 import React, { useEffect } from 'react';
+import { fetchFilms } from '../data/asyncActions/fetchFilms';
+import { useDispatch, useSelector } from 'react-redux';
+import './styles/MainPageStyles.css'
+import FilmsCard from '../Components/MainPage/FilmsCard';
 
 const MainPage = () => {
+    const dispatch = useDispatch();
+    const popularFilms = useSelector(state => state.films.data);
+    const loading = useSelector(state => state.films.loading);
+    const error = useSelector(state => state.films.error);
 
     useEffect(() => {
-        fetch('https://api.kinopoisk.dev/v1.4/movie?page=1&limit=50', {
-            headers: {
-                'X-API-KEY': '2CNPDYY-EB2MANC-QHGWFNW-WVCT91P'
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Не получилось получить данные!');
-            }
-            return response.json();
-        })
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-        
-    }, [])
+        dispatch(fetchFilms());
+    }, [dispatch]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <main className='main-page__content'>
+            {popularFilms && popularFilms.map(film => (
+                <FilmsCard
+                    key={film.id}
+                    image={film.poster.url}
+                    title={film.poster.name}
+                    genre={film.genres}
+                />
+            ))}
+        </main>
     );
 }
 
