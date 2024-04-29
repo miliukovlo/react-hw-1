@@ -1,0 +1,36 @@
+.film-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+}
+.film-card:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+.film-card__poster {
+    height: 80%;
+    width: 100%;
+}
+.film-card__title {
+    height: 10%;
+    width: 100%;
+    font-size: 2vh;
+    margin-left: 15px;
+}
+.film-card__genre-block {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.genre-block__text {
+    font-size: 1.6vh;
+    margin-left: 15px;
+}

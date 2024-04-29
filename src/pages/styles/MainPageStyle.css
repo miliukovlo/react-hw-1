@@ -1,0 +1,15 @@
+.main-page__content {
+    width: 90%;
+    height: 80%;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-row-gap: .5em;
+    grid-column-gap: 1em;
+    padding: 20px;
+}
+.main-page__title {
+    font-size: 3vh;
+    text-align: center;
+}
