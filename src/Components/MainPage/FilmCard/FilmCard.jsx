@@ -11,11 +11,13 @@ const FilmCard = ({
             <img className='film-card__poster' src={poster} alt="Постер к фильму" />
             <h2 className='film-card__title'>{title}</h2>
             <div className="film-card__genre-block">
+                <p> жанр:
                 {genres.map((genre, index) => {
                     return (
-                        <p key={index} className='genre-block__text'>{genre.name}</p>
+                        <span key={index} className='genre-block__text'>{genre.name}</span>
                     )
                 })}
+                </p>
             </div>
         </div>
     );

@@ -34,8 +34,13 @@ const MainPage = () => {
         <>
             <h2 className='main-page__title'>Популярные фильмы</h2>
             <main className='main-page__content'>
-            {popularFilms && popularFilms.slice(0, limit).map(({ id, poster, name, genres }) => (
-                <FilmCard key={id} id={id} poster={poster.url} title={name} genres={genres} />
+            {popularFilms && popularFilms.map(({ id, poster, name, genres }) => (
+                <FilmCard 
+                    key={id} 
+                    poster={poster.url} 
+                    title={name} 
+                    genres={genres} 
+                />
             ))}
             </main>
             <div ref={contentRef} className="main-page__observer"></div>
