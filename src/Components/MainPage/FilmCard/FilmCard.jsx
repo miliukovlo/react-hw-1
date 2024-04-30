@@ -29,11 +29,11 @@ const FilmCard = ({
                 id: id
             }
             dispatch(addFavoriteFilm(newFilm))
-        }
-        if (favoriteFilms.some(film => film.id === id) && isFilmFavorite) {
+        } else {
             dispatch(removeFavoriteFilm(id))
         }
     }
+    
 
     return (
         <div className='film-card'>
