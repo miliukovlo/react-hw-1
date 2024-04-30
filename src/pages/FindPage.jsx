@@ -31,7 +31,8 @@ const FindPage = () => {
                     foundFilms.map(({ id, poster, name, genres }) => {
                         return (
                             <FilmCard
-                                key={id} 
+                                key={id}
+                                id={id} 
                                 poster={poster.url} 
                                 title={name} 
                                 genres={genres} 

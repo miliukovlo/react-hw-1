@@ -36,7 +36,8 @@ const MainPage = () => {
             <main className='main-page__content'>
             {popularFilms && popularFilms.map(({ id, poster, name, genres }) => (
                 <FilmCard 
-                    key={id} 
+                    key={id}
+                    id={id}
                     poster={poster.url} 
                     title={name} 
                     genres={genres} 

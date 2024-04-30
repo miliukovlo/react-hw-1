@@ -901,7 +901,7 @@
             rating: {
             kp: 8.787,
             imdb: 8.2,
-            filmCritics: 0,
+            filmCritics: 0, 
             russianFilmCritics: 0
             },
             votes: {
