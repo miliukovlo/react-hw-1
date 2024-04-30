@@ -14,13 +14,13 @@
 }
 .film-card:hover {
     border: 2px solid black;
-    cursor: pointer;
 }
 .film-card__poster {
     height: 80%;
     width: 100%;
     border-radius: 8px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
 }
 .film-card__title {
     height: 10%;
@@ -64,6 +64,9 @@
 }
 .favorite-image:hover {
     fill: red;
+}
+.favorite-image__true {
+    fill: red
 }
 .watch-later__image:hover {
     fill: yellow;
