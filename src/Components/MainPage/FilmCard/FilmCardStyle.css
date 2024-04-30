@@ -34,11 +34,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
     margin-left: 15px;
 }
 .genre-block__text {
     font-size: 1.6vh;
-    margin-left: 15px;
+    margin-left: 5px;
+    text-wrap: wrap;
 }
 .film-card__function-block {
     height: 5%;

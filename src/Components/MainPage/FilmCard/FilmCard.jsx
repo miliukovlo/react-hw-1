@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './FilmCardStyle.css'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +23,7 @@ const FilmCard = ({
         navigate(`/films/${id}`)
     }
 
-    const handleAddToFavorite = () => {
+    const handleAddToFavorite = useCallback(() => {
         if (!favoriteFilms.some(film => film.id === id)) {
             const newFilm = {
                 title: title,
@@ -35,8 +35,8 @@ const FilmCard = ({
         } else {
             dispatch(removeFavoriteFilm(id))
         }
-    }
-    const handleAddToWatchLater = () => {
+    }, [dispatch, id, favoriteFilms, title, genres, poster])
+    const handleAddToWatchLater = useCallback(() => {
         if (!watchLaterFilms.some(film => film.id === id)) {
             const newFilm = {
                 title: title,
@@ -48,7 +48,7 @@ const FilmCard = ({
         } else {
             dispatch(removeWatchLater(id))
         }
-    }
+    }, [watchLaterFilms, dispatch, title, genres, poster, id])
     
 
     return (
@@ -82,4 +82,4 @@ const FilmCard = ({
     );
 }
 
-export default FilmCard;
+export default React.memo(FilmCard);
