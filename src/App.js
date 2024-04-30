@@ -1,11 +1,15 @@
+import { Provider } from 'react-redux';
 import Router from './router/Router';
 import './styles/App.css';
 
 import React from 'react';
+import { store } from './data/reducer/store';
 
 const App = () => {
   return (
-    <Router/>
+    <Provider store={store}>
+      <Router/>
+    </Provider>
   );
 }
 
