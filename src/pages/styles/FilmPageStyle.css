@@ -90,6 +90,12 @@
 .favorite-image:hover {
     fill: red;
 }
+.favorite-image__true {
+    fill: red
+}
 .watch-later__image:hover {
+    fill: yellow;
+}
+.watch-later__image-true {
     fill: yellow;
 }
