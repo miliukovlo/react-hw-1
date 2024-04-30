@@ -11,12 +11,14 @@ const FilmCard = ({
 
     const navigate = useNavigate()
 
-    const handleClick = () => {
+    const handleNavigateToFilm = () => {
         navigate(`/films/${id}`)
     }
 
+    const
+
     return (
-        <div className='film-card' onClick={handleClick}>
+        <div className='film-card' onClick={handleNavigateToFilm}>
             <img className='film-card__poster' src={poster} alt="Постер к фильму" />
             <h2 className='film-card__title'>{title}</h2>
             <div className="film-card__genre-block">
