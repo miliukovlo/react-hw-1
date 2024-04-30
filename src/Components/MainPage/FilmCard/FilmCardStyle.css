@@ -71,3 +71,6 @@
 .watch-later__image:hover {
     fill: yellow;
 }
+.watch-later__image-true {
+    fill: yellow;
+}
