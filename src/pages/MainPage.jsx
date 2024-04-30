@@ -13,7 +13,7 @@ const MainPage = () => {
     useEffect(() => {
         observer.current = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && limit < 100) {
                     setLimit(prevLimit => prevLimit + 10);
                 }
             });
