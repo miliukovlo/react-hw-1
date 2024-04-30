@@ -15,12 +15,27 @@ const FilmCard = ({
     const dispatch = useDispatch()
     const favoriteFilms = useSelector(state => state.favorite.films)
     const isFilmFavorite = favoriteFilms.some(film => film.id === id)
+    const watchLaterFilms = useSelector(state => state.later.films)
+    const isWatchLaterFilm = watchLaterFilms.some(film => film.id === id)
 
     const handleNavigateToFilm = () => {
         navigate(`/films/${id}`)
     }
 
     const handleAddToFavorite = () => {
+        if (!favoriteFilms.some(film => film.id === id)) {
+            const newFilm = {
+                title: title,
+                genres: genres,
+                poster: poster, 
+                id: id
+            }
+            dispatch(addFavoriteFilm(newFilm))
+        } else {
+            dispatch(removeFavoriteFilm(id))
+        }
+    }
+    const handleAddToWatchLater = () => {
         if (!favoriteFilms.some(film => film.id === id)) {
             const newFilm = {
                 title: title,

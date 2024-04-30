@@ -17,5 +17,5 @@ export const watchLaterFilmsReducer = (state = defaultValue, action) => {
     }
 }
 
-export const addFavoriteFilm = (payload) => ({type: ADD_WATCH_LATER_FILM, payload})
-export const removeFavoriteFilm = (payload) => ({type: REMOVE_WATCH_LATER_FILM, payload})
+export const addWatchLater = (payload) => ({type: ADD_WATCH_LATER_FILM, payload})
+export const removeWatchLater = (payload) => ({type: REMOVE_WATCH_LATER_FILM, payload})
