@@ -31,8 +31,37 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-left: 15px;
 }
 .genre-block__text {
     font-size: 1.6vh;
     margin-left: 15px;
+}
+.film-card__function-block {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.function-block__button {
+    height: 70%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+}
+.favorite-image, .watch-later__image {
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.favorite-image:hover {
+    fill: red;
+}
+.watch-later__image:hover {
+    fill: yellow;
 }
