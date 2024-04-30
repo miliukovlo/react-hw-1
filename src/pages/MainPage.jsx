@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useGetFilms } from '../hooks/useGetFilms';
 import './styles/MainPageStyle.css'
 import FilmCard from '../Components/MainPage/FilmCard/FilmCard';
+import Sidebar from '../Components/Common/Sidebar/Sidebar';
 
 const MainPage = () => {
     const [limit, setLimit] = useState(10)
@@ -33,17 +34,21 @@ const MainPage = () => {
     return (
         <>
             <h2 className='main-page__title'>Популярные фильмы</h2>
-            <main className='main-page__content'>
-            {popularFilms && popularFilms.map(({ id, poster, name, genres }) => (
-                <FilmCard 
-                    key={id}
-                    id={id}
-                    poster={poster.url} 
-                    title={name} 
-                    genres={genres} 
-                />
-            ))}
-            </main>
+            <div className="content">
+                <main className='main-page__content'>
+                {popularFilms && popularFilms.map(({ id, poster, name, genres, rating }) => (
+                    <FilmCard 
+                        key={id}
+                        id={id}
+                        poster={poster.url} 
+                        title={name} 
+                        genres={genres}
+                        rating={rating}
+                    />
+                ))}
+                </main>
+                <Sidebar/>
+            </div>
             <div ref={contentRef} className="main-page__observer"></div>
         </>
     );
