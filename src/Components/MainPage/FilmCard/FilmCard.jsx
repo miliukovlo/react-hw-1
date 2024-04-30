@@ -2,7 +2,7 @@ import React from 'react';
 import './FilmCardStyle.css'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavoriteFilm } from '../../../data/reducer/favoriteFilmsReducer';
+import { addFavoriteFilm, removeFavoriteFilm } from '../../../data/reducer/favoriteFilmsReducer';
 
 const FilmCard = ({
     title,
@@ -29,6 +29,9 @@ const FilmCard = ({
                 id: id
             }
             dispatch(addFavoriteFilm(newFilm))
+        }
+        if (favoriteFilms.some(film => film.id === id) && isFilmFavorite) {
+            dispatch(removeFavoriteFilm(id))
         }
     }
 
