@@ -6,5 +6,5 @@ export const useGetCurrentFilm = () => {
 
     const allFilmsData = filmsData
 
-    return allFilmsData.filter(film => film.id === Number(params.id))
+    return allFilmsData.find(film => film.id === Number(params.id))
 }
