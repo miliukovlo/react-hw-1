@@ -8,7 +8,8 @@ import { addWatchLater, removeWatchLater } from '../../../data/reducer/watchLate
 const FilmCard = ({
     title,
     genres,
-    poster, 
+    poster,
+    rating, 
     id
 }) => {
 
@@ -28,27 +29,29 @@ const FilmCard = ({
             const newFilm = {
                 title: title,
                 genres: genres,
-                poster: poster, 
+                poster: poster,
+                rating, 
                 id: id
             }
             dispatch(addFavoriteFilm(newFilm))
         } else {
             dispatch(removeFavoriteFilm(id))
         }
-    }, [dispatch, id, favoriteFilms, title, genres, poster])
+    }, [dispatch, id, favoriteFilms, title, genres, poster, rating])
     const handleAddToWatchLater = useCallback(() => {
         if (!watchLaterFilms.some(film => film.id === id)) {
             const newFilm = {
                 title: title,
                 genres: genres,
-                poster: poster, 
+                poster: poster,
+                rating: rating, 
                 id: id
             }
             dispatch(addWatchLater(newFilm))
         } else {
             dispatch(removeWatchLater(id))
         }
-    }, [watchLaterFilms, dispatch, title, genres, poster, id])
+    }, [watchLaterFilms, dispatch, title, genres, poster, id, rating])
     
 
     return (

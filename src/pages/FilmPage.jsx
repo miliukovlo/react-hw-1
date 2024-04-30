@@ -32,7 +32,8 @@ const FilmPage = () => {
             const newFilm = {
                 title: name,
                 genres: genres,
-                poster: poster, 
+                poster: poster,
+                rating: rating, 
                 id: id
             }
             dispatch(addFavoriteFilm(newFilm))
