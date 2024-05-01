@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './styles/FindPageStyle.css'
 import Input from './../Components/UI/Input';
 import { useInput } from '../hooks/useInput';

@@ -20,7 +20,6 @@
     width: 100%;
     border-radius: 8px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
-    cursor: pointer;
 }
 .film-card__title {
     height: 5%;
@@ -28,6 +27,7 @@
     font-size: 2vh;
     margin: 0;
     margin-left: 15px;
+    cursor: pointer;
 }
 .film-card__rating {
     height: 5%;
