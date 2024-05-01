@@ -119,3 +119,54 @@
     grid-column-gap: 1em;
     justify-items: center;
 }
+.film-page__comment-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.comment-block__button {
+    width: 10%;
+    height: 20%;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px;
+}
+.comment-block__button:hover {
+    background-color: black;
+    color: white;
+}
+.comment-block__no-comments {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+}
+.comment-block__element {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px;
+}
+.element-title {
+    font-size: 1.5vh;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+}
+.element-text {
+    font-size: 1.3vh;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

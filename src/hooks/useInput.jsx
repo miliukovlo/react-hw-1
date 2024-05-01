@@ -11,6 +11,7 @@ export const useInput = (currentValue) => {
 
     return {
         value,
+        setValue,
         onChange,
         isChanged,
         setIsChanged
