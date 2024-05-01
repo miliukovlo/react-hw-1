@@ -3,17 +3,16 @@ import { filmsData } from './../../../data/filmsData';
 import { useInput } from './../../../hooks/useInput';
 import './FormStyle.css'
 import { useSortFilms } from '../../../hooks/useSortFilms';
-import { useSearchParams } from 'react-router-dom';
 import { genresCheck } from './../../../data/genresData';
 import Checkbox from '../../UI/Checkbox';
 
 const allFilms = filmsData;
 
 const Form = ({ setFilms, limit }) => {
-    const [searchParams, setSearchParams] = useSearchParams({genres: []})
     const selectValue = useInput("1")
     const [genres, setGenres] = useState(genresCheck)
-    const sortedFilms = useSortFilms(allFilms, selectValue.value)
+    const [changeGenre, setChangeGenre] = useState(false)
+    const sortedFilms = useSortFilms(allFilms, selectValue.value, genres)
     const [prevLimit, setPrevLimit] = useState(limit)
     const sortFilms = useMemo(() => sortedFilms, [sortedFilms])
 
@@ -24,16 +23,18 @@ const Form = ({ setFilms, limit }) => {
             }
             return genre;
         }));
+        setChangeGenre(true)
     }, [])
 
 
     useEffect(() => {
-        if (selectValue.isChanged || limit > prevLimit) {
+        if (selectValue.isChanged || limit > prevLimit || changeGenre) {
             setFilms(sortFilms.slice(0, limit))
             selectValue.setIsChanged(false)
             setPrevLimit(limit)
+            setChangeGenre(false)
         }
-    }, [selectValue.value, sortFilms, limit, selectValue.isChanged, setFilms])
+    }, [selectValue.value, limit, selectValue.isChanged, changeGenre])
 
     return (
         <form className='form'>
