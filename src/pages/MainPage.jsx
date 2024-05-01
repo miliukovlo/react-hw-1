@@ -3,15 +3,19 @@ import { useGetFilms } from '../hooks/useGetFilms';
 import './styles/MainPageStyle.css'
 import FilmCard from '../Components/MainPage/FilmCard/FilmCard';
 import Sidebar from '../Components/Common/Sidebar/Sidebar';
+import Form from '../Components/Common/Form/Form';
 
 const MainPage = () => {
     const [limit, setLimit] = useState(10)
 
     const popularFilms = useGetFilms(limit)
+    const [filteredFilms, setFilteredFilms] = useState(popularFilms)
     const observer = useRef(null)
     const contentRef = useRef(null)
+    
 
     useEffect(() => {
+
         observer.current = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && limit < 100) {
@@ -34,9 +38,13 @@ const MainPage = () => {
     return (
         <>
             <h2 className='main-page__title'>Популярные фильмы</h2>
+            <Form
+                setFilms={setFilteredFilms}
+                limit={limit}
+            />
             <div className="content">
                 <main className='main-page__content'>
-                {popularFilms && popularFilms.map(({ id, poster, name, genres, rating }) => (
+                {popularFilms && filteredFilms.map(({ id, poster, name, genres, rating }) => (
                     <FilmCard 
                         key={id}
                         id={id}

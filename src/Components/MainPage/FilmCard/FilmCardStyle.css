@@ -23,9 +23,17 @@
     cursor: pointer;
 }
 .film-card__title {
-    height: 10%;
+    height: 5%;
     width: 100%;
     font-size: 2vh;
+    margin: 0;
+    margin-left: 15px;
+}
+.film-card__rating {
+    height: 5%;
+    width: 100%;
+    font-size: 1.7vh;
+    margin: 0;
     margin-left: 15px;
 }
 .film-card__genre-block {
