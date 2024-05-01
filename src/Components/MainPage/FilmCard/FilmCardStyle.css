@@ -11,6 +11,7 @@
     border-radius: 8px;
     transition-duration: 0.5s;
     margin-left: 5px;
+    align-self: center;
 }
 .film-card:hover {
     border: 2px solid black;
@@ -43,13 +44,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    text-wrap: wrap;
+    overflow: hidden;
     margin-left: 15px;
 }
 .genre-block__text {
     font-size: 1.6vh;
     margin-left: 5px;
-    text-wrap: wrap;
 }
 .film-card__function-block {
     height: 5%;

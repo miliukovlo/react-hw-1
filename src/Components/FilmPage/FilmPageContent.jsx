@@ -21,7 +21,7 @@ const FilmPageContent = ({
         </div>
         <div className="content-information">
             <div className="content-information__block">
-                <p className='block__title'>Жанры: 
+                <p className='block__title'>Жанры: </p>
                     <ul className='genre-block__list'>
                         {genres.map(genre => {
                             return (
@@ -29,7 +29,6 @@ const FilmPageContent = ({
                             )
                         })}
                     </ul>
-                </p>
             </div>
             <div className="content-information__block">
                 <div className="description-block">

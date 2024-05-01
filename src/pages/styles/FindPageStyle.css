@@ -8,6 +8,7 @@
     grid-row-gap: .5em;
     grid-column-gap: 1em;
     padding: 20px;
+    justify-items: center;
 }
 .find-page__content-not-find {
     width: 100%;

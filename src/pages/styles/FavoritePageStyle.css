@@ -7,6 +7,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     grid-row-gap: .5em;
+    justify-items: center;
     grid-column-gap: 1em;
 }
 .favorite-page__no-content {
