@@ -7,6 +7,7 @@ import SimilarFilmsBlock from '../Components/FilmPage/SimilarFilmsBlock/SimilarF
 import { useInput } from './../hooks/useInput';
 import { useGetComments } from '../hooks/useGetComments';
 import CommentsFilmBlock from '../Components/FilmPage/CommentsFilmBlock/CommentsFilmBlock';
+import Sidebar from '../Components/Common/Sidebar/Sidebar';
 
 
 const FilmPage = () => {
@@ -23,17 +24,20 @@ const FilmPage = () => {
     return (
         <>
             <h2 className='film-page__title'>Страница фильма {currentFilm.name}</h2>
-            <FilmPageContent
-                name={currentFilm.name} 
-                poster={currentFilm.poster} 
-                genres={currentFilm.genres}
-                description={currentFilm.description}
-                id={currentFilm.id}
-                rating={currentFilm.rating}
-                movieLength={currentFilm.movieLength}
-                year={currentFilm.year}
-                linkToStaff={linkToStaff}
-            />
+            <div className="content">
+                <FilmPageContent
+                    name={currentFilm.name} 
+                    poster={currentFilm.poster} 
+                    genres={currentFilm.genres}
+                    description={currentFilm.description}
+                    id={currentFilm.id}
+                    rating={currentFilm.rating}
+                    movieLength={currentFilm.movieLength}
+                    year={currentFilm.year}
+                    linkToStaff={linkToStaff}
+                />
+                <Sidebar/>
+            </div>
             <SimilarFilmsBlock
                 similarFilms={similarFilms}
             />

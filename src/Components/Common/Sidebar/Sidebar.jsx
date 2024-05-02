@@ -6,7 +6,7 @@ const Sidebar = () => {
     const navigate = useNavigate()
 
     const handleNavigateFavorite = () => {
-        navigate('favorite')
+        navigate('/favorite')
     }
 
     const handleNavigateLater = () => {

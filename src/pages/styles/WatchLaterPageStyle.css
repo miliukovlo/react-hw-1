@@ -22,3 +22,10 @@
     font-size: 3vh;
     text-align: center;
 }
+.content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
