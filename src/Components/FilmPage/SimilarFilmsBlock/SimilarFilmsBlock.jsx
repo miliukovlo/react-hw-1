@@ -1,5 +1,6 @@
 import React from 'react';
-import FilmCard from '../MainPage/FilmCard/FilmCard';
+import FilmCard from '../../MainPage/FilmCard/FilmCard';
+import './SimilarFilmsBlockStyle.css'
 
 const SimilarFilmsBlock = ({similarFilms}) => {
     return (

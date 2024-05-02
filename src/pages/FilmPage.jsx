@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useGetCurrentFilm } from '../hooks/useGetCurrentFilm';
 import './styles/FilmPageStyle.css'
-import FilmPageContent from '../Components/FilmPage/FilmPageContent';
+import FilmPageContent from '../Components/FilmPage/FilmPageContent/FilmPageContent';
 import { useFindSimilarFilms } from '../hooks/useFindSimilarFilms';
-import SimilarFilmsBlock from '../Components/FilmPage/SimilarFilmsBlock';
+import SimilarFilmsBlock from '../Components/FilmPage/SimilarFilmsBlock/SimilarFilmsBlock';
 import { useInput } from './../hooks/useInput';
-import { useDispatch } from 'react-redux';
-import { addComment } from '../data/reducer/commentReducer';
 import { useGetComments } from '../hooks/useGetComments';
+import CommentsFilmBlock from '../Components/FilmPage/CommentsFilmBlock/CommentsFilmBlock';
 
 
 const FilmPage = () => {
     const currentFilm = useGetCurrentFilm()
-
-    const dispatch = useDispatch()
 
     const commentsCurrentFilm = useGetComments(currentFilm.id)
 
@@ -22,15 +19,6 @@ const FilmPage = () => {
     const similarFilms = useFindSimilarFilms(currentFilm.genres, currentFilm.id)
 
     const comment = useInput('')
-
-    const handleAddComment = () => {
-        dispatch(addComment({
-            filmId: currentFilm.id,
-            user: 'Анонимный пользователь',
-            text: comment.value
-        }))
-        comment.setValue('')
-    }
 
     return (
         <>
@@ -49,25 +37,11 @@ const FilmPage = () => {
             <SimilarFilmsBlock
                 similarFilms={similarFilms}
             />
-            <div className="film-page__comment-block">
-                <h2 className='film-page__title'>Комментарии</h2>
-                <textarea name="" id="" cols="70" rows="10" value={comment.value} onChange={comment.onChange}>{comment.value}</textarea>
-                <button onClick={handleAddComment} className='comment-block__button'>Добавить комментарий</button>
-                {commentsCurrentFilm.length === 0 ?
-                    <div className="comment-block__no-comments">
-                        <h4>Комментариев нет!</h4>
-                    </div>
-                    :
-                    commentsCurrentFilm.map(comment => {
-                        return (
-                            <div className="comment-block__element">
-                                <h4 className="element-title">{comment.user}</h4>
-                                <p className="element-text">{comment.text}</p>
-                            </div>
-                        )
-                    })
-            }
-            </div>
+            <CommentsFilmBlock
+                commentsCurrentFilm={commentsCurrentFilm}
+                comment={comment}
+                currentFilm={currentFilm}
+            />
         </>
     );
 }

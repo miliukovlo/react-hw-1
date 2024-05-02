@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddToFavoriteButton from '../UI/addToFavoriteButton';
-import AddToWatchLater from '../UI/AddToWatchLater';
+import AddToFavoriteButton from '../../UI/addToFavoriteButton';
+import AddToWatchLater from '../../UI/AddToWatchLater';
+import './FilmPageContentStyle.css'
 
 const FilmPageContent = ({
     poster,
